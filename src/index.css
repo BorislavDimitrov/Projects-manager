@@ -1,3 +1,172 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidenav-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.noProject-container {
+  padding-right: 200px;
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.projects-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-container p {
+  cursor: pointer;
+  margin: 15px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.projects-container p:hover {
+  background-color: rgb(90, 88, 88);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.cancelSave-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 83%;
+  padding: 20px;
+  display: flex;
+  column-gap: 40px;
+  justify-content: end;
+}
+
+.cancelSave-buttons button {
+  border-radius: 15%;
+  background-color: rgb(255, 252, 249);
+  padding: 10px 15px 10px 15px;
+  color: rgb(25, 30, 33);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cancelSave-buttons button:hover {
+  background-color: black;
+  color: white;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.input-wrapper input {
+  width: 80%;
+  height: 40px;
+  background-color: rgb(188, 177, 177);
+}
+
+.input-wrapper textarea {
+  width: 80%;
+  background-color: rgb(188, 177, 177);
+  height: 200px;
+}
+
+.info-box {
+  display: flex;
+  column-gap: 400px;
+  border-bottom: solid rgb(25, 30, 33);
+}
+
+.info-box .project-content h2 {
+  font-size: 60px;
+}
+
+.info-box .project-content .date {
+  margin-top: 20px;
+  color: grey;
+}
+
+.info-box .project-content .description {
+  margin-top: 60px;
+  font-size: larger;
+  max-width: 600px;
+}
+
+.info-box button {
+  border-radius: 15%;
+  background-color: rgb(255, 252, 249);
+  padding: 10px 15px 10px 15px;
+  color: rgb(25, 30, 33);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info-box button:hover {
+  background-color: black;
+  color: white;
+}
+
+.tasks-box {
+  padding: 50px;
+}
+
+.tasks-box h3 {
+  font-size: 50px;
+}
+
+.input-box {
+  margin-top: 50px;
+}
+
+.input-box input {
+  background-color: gray;
+  border: solid black;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+}
+
+.input-box button {
+  border-radius: 15%;
+  background-color: rgb(255, 252, 249);
+  padding: 10px 15px 10px 15px;
+  color: rgb(25, 30, 33);
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.input-box button:hover {
+  background-color: black;
+  color: white;
+}
+
+.tasks-list {
+  margin-top: 100px;
+}
+
+.tasks-list p {
+  margin: 20px;
+  background-color: rgb(152, 147, 147);
+  padding: 20px;
+}
+
+.tasks-list p button {
+  float: right;
+}
