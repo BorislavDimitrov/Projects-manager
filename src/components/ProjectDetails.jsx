@@ -6,23 +6,19 @@ export default function ProjectDetails({
   onClickDeleteTask,
   onClickAddTask,
 }) {
-  console.log("Render project details");
   const [reset, setReset] = useState(-1);
   const inputRef = useRef();
 
   function handleClear(taskId) {
     onClickDeleteTask(project.current.id, taskId);
-    console.log(counter);
     setReset(counter++);
   }
 
-  function handleCreateTask(title) {
+  function handleCreateTask() {
     if (inputRef.current.value !== "") {
-      console.log(counter);
       onClickAddTask(project.current.id, inputRef.current.value);
       inputRef.current.value = "";
       setReset(counter++);
-      console.log(counter);
     }
   }
 
@@ -32,7 +28,6 @@ export default function ProjectDetails({
         <div className="info-box">
           <div className="project-content">
             <h2>{project.current.title}</h2>
-            {console.log(project.current.title)}
             <p className="date">{project.current.dueDate}</p>
             <p className="description">{project.current.description}</p>
           </div>

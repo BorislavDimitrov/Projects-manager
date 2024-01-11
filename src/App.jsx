@@ -10,10 +10,10 @@ let idCounter = 1;
 const projects = [
   {
     id: 1,
-    title: "stoqn",
-    description: "Hi im stoqn",
+    title: "TEST",
+    description: "TEST",
     dueDate: "20/04/1999",
-    tasks: [{ id: 1, title: "PIENE" }],
+    tasks: [{ id: 1, title: "example" }],
   },
 ];
 
@@ -73,16 +73,12 @@ function App() {
 
   function deleteTask(projectId, taskId) {
     const project = projects.find((project) => project.id === projectId);
-    console.log(project);
     const indexToDelete = project.tasks.findIndex((task) => task.id === taskId);
     project.tasks.splice(indexToDelete, 1);
-    console.log(project);
   }
 
   function createTask(projectId, taskTitle) {
-    console.log("In App create task");
     const project = projects.find((project) => project.id === projectId);
-    console.log("projctd id:" + projectId + " task title:" + taskTitle);
     const newTask = { id: project.tasks.length + 1, title: taskTitle };
     project.tasks.push(newTask);
   }
@@ -95,6 +91,8 @@ function App() {
           onProjectClick={renderProjectDetails}
           onCreateClick={onCreateClick}
           projects={projects}
+          pickedProjectId={projectId}
+          changePickedtProjectId={setProjectId}
         />
         {!isProjectPicked && (
           <NoProjectsSelected onCreateClick={onCreateClick} />

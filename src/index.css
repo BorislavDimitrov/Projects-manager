@@ -170,3 +170,7 @@
 .tasks-list p button {
   float: right;
 }
+
+.picked {
+  background-color: grey;
+}
